@@ -1,0 +1,457 @@
+/*
+
+CSS is an absolute nightmare this code is ductaped together please send help
+
+*/
+
+
+/*
+margin/padding order:
+
+top right bottom left
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-light: #f8f9fa;
+    --secondary-light: #e9ecef;
+    --tertiary-light: #dee2e6;
+    --quaternary-light: #ced4da;
+    --primary-medium: #495057;
+    --primary-dark: #212529;
+    --secondary-dark: #343a40;
+    --primary-blue: #579BB1;
+  
+    --primary-font: "Bebas Neue", sans-serif;
+    --secondary-font: "Montserrat", sans-serif;
+
+    font-weight: 400;
+    font-style: normal;
+
+    --bottom-header-size: 64px;
+}
+  
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+
+    color: var(--primary-dark);
+    background-color: var(--primary-light);
+    font-family: var(--primary-font);
+}
+
+#front {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    color: var(--primary-light);
+    background-color: var(--primary-dark);
+}
+
+#front > p {
+    margin: 0;
+    padding: 5% 0 0 5%;
+    font-size: 64px;
+    text-shadow: 
+        0 1px 0 #ccc,
+        0 2px 0 #c9c9c9,
+        0 3px 0 #bbb,
+        0 4px 0 #b9b9b9,
+        0 5px 0 #aaa,
+        0 6px 1px rgba(0,0,0,.1),
+        0 0 5px rgba(0,0,0,.1),
+        0 1px 3px rgba(0,0,0,.3),
+        0 3px 5px rgba(0,0,0,.2),
+        0 5px 10px rgba(0,0,0,.25),
+        0 10px 10px rgba(0,0,0,.2),
+        0 20px 20px rgba(0,0,0,.15);
+}
+
+#front > h1 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 350px;
+}
+
+@media screen and (max-width: 1100px) {
+    .card {
+        margin: 12px;
+        padding: 20px;
+    }
+
+    .card > p {
+        font-size: 20px;
+    }
+
+    .card > h2 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .card {
+        margin: 12px;
+        padding: 14px;
+    }
+
+    .card > p {
+        font-size: 16px;
+    }
+
+    .card > h2 {
+        font-size: 20px;
+    }
+
+    .about > ul, .contact > p {
+        font-size: 20px;   
+    }
+
+    .projects-container {
+        flex-direction: row !important;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #front > h1 {
+        font-size: 300px;
+    }   
+
+    #front > p {
+        font-size: 54px;
+    }
+
+    /* Bottom */
+
+    .about > h1, .projects > h1, .contact > h1 {
+        font-size: 40px !important;
+    }
+
+    .projects > h1:nth-child(2) {
+        font-size: 18px !important;
+    }
+
+    .projects-container {
+        flex-direction: column !important;
+    }
+
+    .top-section {
+        flex-direction: column !important;
+    }
+
+    .about,
+    .contact {
+        margin: 16px 0px 0px 24px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #front > h1 {
+        font-size: 200px;
+    }   
+
+    #front > p {
+        font-size: 45px;
+    }
+}
+
+@keyframes child2 {
+    from {top: 40%; left: 40%;}
+    to {top: 50%; left: 50%;}
+}
+
+@keyframes child3 {
+    from {top: 45%; left: 45%;}
+    to {top: 52.5%; left: 52.5%;}
+}
+@keyframes child4 {
+    from {top: 50%; left: 50%;}
+    to {top: 55%; left: 55%;}
+}
+
+#front > h1:nth-child(2) {
+    top: 50%;
+    left: 50%;
+    color: var(--primary-light);
+    z-index: 99;
+    text-shadow: var(--quaternary-light) 1px 0 10px;
+
+    animation-name: child2;
+    animation-duration: 2s;
+}
+
+#front > h1:nth-child(3) {
+    top: 52.5%;
+    left: 52.5%;
+    color: var(--tertiary-light);
+    text-shadow: var(--tertiary-light) 1px 0 5px;
+    z-index: 98;
+
+    animation-name: child3;
+    animation-duration: 1.8s;
+}
+
+#front > h1:nth-child(4) {
+    top: 55%;
+    left: 55%;
+    color: var(--quaternary-light);
+    text-shadow: var(--quaternary-light) 1px 0 5px;
+    z-index: 97;
+
+    animation-name: child4;
+    animation-duration: 1.5s;
+}
+
+/*
+
+Button
+
+*/
+
+.button-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 75vh;
+}
+
+.btn {
+    position: absolute;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: #f8f9fa 0px 0 10px;
+    width: 100px;
+    height: 100px;
+    border: 6px solid #f8f9fa;
+    background: none;
+    color: #f8f9fa;
+    font-size: 24px;
+    font-family: "Bebas Neue", sans-serif;
+    transition: color 0.4s ease;
+    z-index: 1;
+    margin-top: 25px;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: #f8f9fa;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    width: 200%;
+    height: 200%;
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: var(--primary-dark);
+}
+
+@keyframes expand {
+    from {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
+    to {
+        width: 200%;
+        height: 200%;
+        opacity: 0;
+    }
+}
+
+.ring {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    box-shadow: 0 0 10px #f8f9fa, inset 0 0 10px #f8f9fa;
+    border: 1px solid #f8f9fa;
+    animation-name: expand;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    margin-top: 25px;
+}
+
+.ring:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.ring:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.ring:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+/*
+
+Second Page
+
+*/
+
+#bottom {
+    position: relative;
+    width: 100vw;
+    color: var(--primary-light);
+    background: linear-gradient(180deg, var(--primary-dark) 10%, var(--secondary-dark) 100%);
+    padding-top: 50px;
+}
+
+.about:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+.about > h1 {
+    font-family: var(--primary-font);
+    margin: 0;
+    margin-top: 10px;
+    text-align: center;
+    font-size: var(--bottom-header-size);
+}
+
+.about,
+.contact {
+    flex: 1;
+    font-size: 24px;
+    box-shadow: 0 0 10px #f8f9fa, inset 0 0 10px #f8f9fa;
+    border: 4px solid #f8f9fa;
+    border-radius: 16px;
+    font-family: var(--secondary-font);
+    transition: background-color 0.33s ease, color 0.33s ease;
+    display: flex;
+    flex-direction: column;
+    margin: 0 32px 0 32px;
+    padding: 8px;
+}
+
+.top-section {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+.contact:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+.contact > h1 {
+    font-family: var(--primary-font);
+    margin: 0;
+    margin-top: 10px;
+    text-align: center;
+    font-size: var(--bottom-header-size);
+}
+
+.contact > p {
+    padding-left: 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.contact > p > i {
+    margin-right: 8px;
+}
+
+.contact > p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+.projects-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    padding-bottom: 50px;
+}
+
+.projects {
+    font-size: 24px;
+    box-shadow: 0 0 10px #f8f9fa, inset 0 0 10px #f8f9fa;
+    border: 4px solid #f8f9fa;
+    border-radius: 16px;
+    width: 75%;
+    font-family: var(--secondary-font);
+}
+
+.projects > h1 {
+    font-family: var(--primary-font);
+    margin: 0;
+    margin-top: 10px;
+    text-align: center;
+    font-size: var(--bottom-header-size);
+}
+
+.projects > h1:nth-child(2) {
+    font-size: 16px;
+}
+
+.projects-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    padding: 8px;
+    flex-direction: row;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 0 10px #f8f9fa, inset 0 0 10px #f8f9fa;
+    border: 4px solid #f8f9fa;
+    border-radius: 16px;
+    font-family: var(--secondary-font);
+    margin: 16px;
+    padding: 24px;
+    flex: 1;
+    transition: background-color 0.33s ease, color 0.33s ease;
+}
+
+.card:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    cursor: pointer;
+}
+
+.card > h2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+a {
+    text-decoration: none;
+}

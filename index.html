@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="style.css" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/f2f0ee16cf.js" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam's Site   </title>
+</head>
+<body>
+    <div id="front">
+        <p>Hi, I'm</p>
+        <h1>SAM</h1>
+        <h1>SAM</h1>
+        <h1>SAM</h1>
+
+        <div class="container">
+            <div class="button-wrapper">
+                <button class="btn"><i class="fa-solid fa-arrow-down"></i></button>
+                <div class="ring"></div>
+                <div class="ring"></div>
+                <div class="ring"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="bottom">   
+        <div class="top-section">
+            <div class="about">
+                <h1>About</h1>
+                <ul>
+                    <li>Makes random stuff
+                        <ul><li>I <i class="fa-solid fa-heart"></i> C</li></ul>
+                    </li>
+                    <li>Cats are cool</li>
+                    <li>idk what else to put here</li>
+                </ul>
+            </div>
+
+            <div class="contact">
+                <h1>Contact</h1>
+                <p onclick="window.open('https://github.com/STCollier', '_blank')"><i class="fa-brands fa-github"></i>Github</p>
+                <p onclick="window.open('https://gist.github.com/STCollier', '_blank')"><i class="fa-brands fa-github-alt"></i>Gists</p>
+                <p style="text-decoration: none; cursor: auto;"><i class="fa-brands fa-discord"></i>uelsam</p>
+            </div>
+        </div>
+
+        <div class="projects-wrapper">
+        <div class="projects">
+            <h1>Projects<h1>(that I'm somewhat proud of)</h1></h1>
+
+            <div class="projects-container">
+                <div class="card" onclick="window.open('https://github.com/STCollier/samcraft', '_blank')">
+                    <h2><i class="fa-solid fa-code"></i> Samcraft</h2>
+                    <p>A 3D voxel engine made with OpenGL and C</p>
+                </div>
+
+                <div class="card"onclick="window.open('https://github.com/STCollier/Snake', '_blank')">
+                    <h2><i class="fa-solid fa-code"></i> 3D Snake</h2>
+                    <p>A 3D snake game made with OpenGL and C over 5 days</p>
+                </div>
+
+                <div class="card"onclick="window.open('https://github.com/STCollier/anguis', '_blank')">
+                    <h2><i class="fa-solid fa-code"></i> Anguis</h2>
+                    <p>A much better 3D multiplayer snake game made with OpenGL and C++</p>
+                </div>
+            </div>
+
+            <div class="projects-container">
+                <div class="card">
+                    <h2><i class="fa-solid fa-file"></i> The Quotes Place</h2>
+                    <p>My first fullstack website; features a like/dislike system, users, login, and more. Written with Next.js, MongoDB, and SCSS.</p>
+                </div>
+
+                <div class="card">
+                    <h2><i class="fa-solid fa-file"></i> Six Words</h2>
+                    <p>Collobration I made with a friend, a place to share quotes using only 6 words. Written wtih Express and Pug.</p>
+                </div>
+            </div>
+
+            <div class="projects-container">
+                <div class="card">
+                    <h2><i class="fa-solid fa-microchip"></i> ESP32-S3 Board</h2>
+                    <p>First attempt with PCB design. Designed to support 3 buttons with GPIO, a display, and USB-C via battery charging. The board isn't functional due to a mistake with the charging chip and I'm too broke to print it again.</p>
+                </div>
+
+                <div class="card">
+                    <h2><i class="fa-solid fa-microchip"></i> Battery Charger</h2>
+                    <p>Second PCB I made, designed to charge a lithium-ion battery via USB-C and output 1 of 3 voltage values. Not printed yet.</p>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </div>
+
+</body>
+    <script src="script.js"></script>
+</html>
